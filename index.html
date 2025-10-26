@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="icon" href="assets/anketa-avatar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="loginSection" class="section visible">
+            <h2>Login</h2>
+            <label>Name: <input type="text" id="userField"></label>
+            <label>Password: <input type="password" id="passField"></label>
+            <button id="btnEnter">Sign in</button>
+        </div>
+        <div id="welcomeSection" class="section">
+            <h2 id="welcomeHeader"></h2>
+            <p>Would you like to take the survey again?</p>
+            <div class="options-inline">
+                <button id="btnYes">Yes</button>
+                <button id="btnNo">No</button>
+            </div>
+        </div>
+        <div id="formSection" class="section">
+            <h2 id="formHeader"></h2>
+            <form id="mainForm">
+                <div class="item">
+                    <div class="num">1</div>
+                    <div class="text">Your age</div>
+                    <input type="number" name="Возраст" required>
+                </div>
+                <div class="item">
+                    <div class="num">2</div>
+                    <div class="text">Sex</div>
+                    <select name="Пол" required>
+                        <option value="">-- choose --</option>
+                        <option>Man</option>
+                        <option>Woman</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="item"><div class="num">3</div><div class="text">What city do you live in?</div><input type="text" name="Город" required></div>
+                <div class="item"><div class="num">4</div><div class="text">Do you have any pets?</div>
+                    <div class="options-inline">
+                        <label><input type="radio" name="Животные" value="Да" required> Yes</label>
+                        <label><input type="radio" name="Животные" value="Нет"> No</label>
+                    </div>
+                </div>
+                <div class="item"><div class="num">5</div><div class="text">What countries have you visited?</div>
+                    <input type="text" name="Страны" required>
+                </div>
+                <div class="item"><div class="num">6</div><div class="text">What cuisine do you prefer?</div><input type="text" name="Кухня" required></div>
+                <div class="item"><div class="num">7</div><div class="text">Favorite book</div><input type="text" name="Книга" required></div>
+                <div class="item"><div class="num">8</div><div class="text">How many hours a week do you work/study?</div><input type="number" name="Занятость" required></div>
+                <div class="item"><div class="num">9</div><div class="text">What type of holiday is closer to you?</div><input type="text" name="Отдых" required></div>
+                <div class="item"><div class="num">10</div><div class="text">Your goals for the coming year</div><textarea name="Цели" required></textarea></div>
+                <button type="submit" id="btnSend" disabled>Send</button>
+            </form>
+        </div>
+        <div id="resultSection" class="section">
+            <h2 id="resultHeader"></h2>
+            <div id="output"></div>
+            <button id="btnHome">Home</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
