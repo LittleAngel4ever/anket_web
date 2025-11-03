@@ -7,8 +7,8 @@ const btnHome = document.getElementById("btnHome");
 
 let activeUser = "";
 
-const loginName = "user";
-const loginPass = "1234";
+const loginName = "";
+const loginPass = "";
 
 btnEnter.addEventListener("click", () => {
     const userValue = document.getElementById("userField").value.trim();
